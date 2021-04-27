@@ -43,6 +43,7 @@ a:hover {
 
 /* ipotizziamo di avere un tot di varianti simili nel sito quindi centralizziamo */
 .btn.white {
+    border: solid 1px #000;
     background-color: #fff;
     color: #000;
 }
@@ -197,6 +198,9 @@ main img {
     margin: 0 auto;
 }
 
+
+
+
     /* jumbotron */
 #jumbo {
     background-color: #b4d0e7;
@@ -229,13 +233,15 @@ main img {
     display: block;
 }
 
-
     /* col DX */
 #jumbo .col-dx {
     float: left;
     width: 65%;
     margin-left: 5%;
 }
+
+
+
 
 /* sezione piani */
 #plans {
@@ -349,7 +355,34 @@ così da no doverne gestire da css tanti quante sono le icone */
     min-width: 30%;
 }
 
-    
+
+
+
+    /* sezione partners */
+#partners {
+    padding: 125px 0;
+}
+
+#partners .col-sx {
+    float: left;
+    width: 55%;
+}
+
+#partners .col-dx {
+    float: right;
+    width: 40%;
+    margin-left: 5%;
+}
+
+#partners h3 {
+    font-size: 25px;
+    margin: 40px 0 25px 0;
+}
+
+#partners p {
+    margin-bottom: 25px;
+    line-height: 180%;
+}
 
 
 
