@@ -249,14 +249,15 @@ main img {
     margin-bottom: 40px;
 }
 /* usando le col dovremmo spronarli a ragionare più pulito dividendo chi fa cosa 
-(e perlopmeno all'inizio incasinarsio meno) 
-qui blocchiamo lo spazio tra i blocchi in px ma i blocchi in sono in % */
+(e perlomeno all'inizio incasinarsi meno)  */
 #plans .col {
-    width: calc(100% /3);
-    padding-right: 60px;
+    float: left;
+    /* qui blocchiamo lo spazio tra i blocchi in px ma i blocchi in sono in % */
+    width: calc((100% / 3) - 40px);
+    margin: 0 60px;
 }
-#plans .col:last-child {
-    padding-right: 0;
+#plans .col:first-child, #plans .col:last-child {
+    margin: 0;
 }
 
 /* blocco piano */
@@ -271,6 +272,7 @@ qui blocchiamo lo spazio tra i blocchi in px ma i blocchi in sono in % */
     font-size: 14px;
     border: solid 1px #d0d0d3;
     margin-bottom: 50px;
+    min-height: 1023px; /* per ora non abbiamo molto per regolarizzare in altezza*/
 }
 
 .plan h3 {
@@ -329,6 +331,22 @@ così da no doverne gestire da css tanti quante sono le icone */
     height: 1px;
     width: 50px;
     background-color: #d0d0d3;
+}
+
+/* regole paricolari per piano eneterprise */
+.plan.enterprise{
+    min-height: auto;
+}
+.plan.enterprise p {
+    margin-top: 30px;
+}
+.plan.enterprise h3 {
+    float: left;
+}
+.plan.enterprise .btn {
+    float: right;
+    width: auto;
+    min-width: 30%;
 }
 
     
