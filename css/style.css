@@ -360,7 +360,7 @@ così da no doverne gestire da css tanti quante sono le icone */
 
     /* sezione partners */
 #partners {
-    padding: 125px 0;
+    padding: 100px 0 50px 0;
 }
 
 #partners .col-sx {
@@ -383,6 +383,37 @@ così da no doverne gestire da css tanti quante sono le icone */
     margin-bottom: 25px;
     line-height: 180%;
 }
+
+
+
+    /* sezione operazioni */
+#operations {
+    padding: 50px 0;
+}
+
+#operations h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+#operations h3 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+#operations .row{
+    margin-bottom: 100px;
+}
+#operations .col {
+    float: left;
+    /* identico a #plans .col
+    (non ripetiamo molto e potrebbe essere meno mantenibile centralizzare in questo caso)  % */
+    width: calc((100% / 3) - 40px);
+    margin: 0 60px;
+}
+#operations .col:first-child, #operations .col:last-child {
+    margin: 0;
+}
+
 
 
 
