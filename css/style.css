@@ -9,7 +9,7 @@ body{
     /* il font principale è a pagamento, ma usiamo l'open sans da Gfonts */
     font-family: 'SharpGroteskWide','Open Sans',sans-serif;
     font-size: 16px;
-    color: #fff;
+    color: #000;
 }
 
 /* comportamento base della maggior parte dei link */
@@ -106,7 +106,7 @@ header {
 #main-nav ul li a:hover {
     text-decoration: none;
 }
-/* border sul li per esigenze del submenu (bordo voce principale mentre aperto submenù) */
+/* border sul li (invece che su "a") per esigenze del submenu (bordo voce principale mentre aperto submenù) */
 #main-nav ul li:hover {
     border-bottom: solid 2px #000;
 }
@@ -124,7 +124,7 @@ header {
 #main-nav ul li .sub-menu {
     display: none;
     float: none;
-    position: absolute;
+    position: absolute; /* rispetto al "li" padre*/
     top: 79px;
     left: -20px;
     padding: 17px 0;
@@ -135,7 +135,7 @@ header {
     margin: 0;
     display: block;
     padding: 0;
-    white-space: nowrap; /*per tenere la dimensione sul contenuto */
+    white-space: nowrap; /*per tenere la dimensione minime sul contenuto */
 }
 #main-nav ul li .sub-menu li a {
     padding: 10px 30px;
