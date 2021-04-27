@@ -6,8 +6,8 @@
 }
 
 body{
-    /* il font principale è a pagamento, ma usiamo l'open sans da Gfonts */
-    font-family: 'SharpGroteskWide','Open Sans',sans-serif;
+    /* il font principale ('SharpGroteskWide') è a pagamento, ma usiamo l'open sans da Gfonts */
+    font-family: 'Open Sans',sans-serif;
     font-size: 16px;
     color: #000;
 }
@@ -158,6 +158,24 @@ header {
 .go-down a {
     color: #000;
 }
+
+/* simuliamo dei checkbox per avere quello stile */
+.fake-check {
+    display: inline-block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: solid 1px #d0d0d3;
+    vertical-align: bottom;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.fake-check:first-child {
+    margin-left: 0;
+}
+.fake-check.checked {
+    border: solid 5px #0061ff;
+}
    
 
 
@@ -252,18 +270,26 @@ qui blocchiamo lo spazio tra i blocchi in px ma i blocchi in sono in % */
     padding: 30px;
     font-size: 14px;
     border: solid 1px #d0d0d3;
+    margin-bottom: 50px;
 }
 
-.plan h2 {
+.plan h3 {
     font-size: 25px;
     margin-bottom: 15px;
 }
-.plan h3 {
+.plan h4 {
     font-size: 16px;
     margin-bottom: 10px;
 }
+.plan h5 {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
 .plan .def {
     color: #637381;
+    margin-bottom: 50px;
+    display: block;
 }
 
 .plan .specs{
@@ -271,15 +297,37 @@ qui blocchiamo lo spazio tra i blocchi in px ma i blocchi in sono in % */
 }
 .plan .specs li {
     list-style-type: none;
+    padding-left: 20px;
     margin-bottom: 25px;
 }
+/* simuliamo la tipologia diversa di marker per i "li" 
+così da no doverne gestire da css tanti quante sono le icone */
+.plan .specs li .fas, .plan .specs li .far {
+    margin-left: -19px;
+}
+.plan .specs li .fa-check {
+    color: rgb(0, 97, 255);
+}
+
+.plan .btn {
+    width: 100%;
+    text-align: center;
+}
+
 .plan .calltoact {
     margin-top: 30px;
+}
+.plan .calltoact a {
+    color: #0061ff;
+    text-decoration: underline;
+}
+.plan .calltoact a:hover {
+    text-decoration: none;
 }
 .plan .line {
     margin: 30px 0 40px 0;
     height: 1px;
-    width: 30%;
+    width: 50px;
     background-color: #d0d0d3;
 }
 
