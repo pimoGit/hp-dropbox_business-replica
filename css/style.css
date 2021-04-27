@@ -31,7 +31,7 @@ a:hover {
 /* centralizziamo ciò che si può */
 .btn {
     display: inline-block;
-    padding: 8px 50px;
+    padding: 8px 20px;
     background-color: #0061ff;
     color: #fff;
     text-decoration: none;
@@ -150,6 +150,14 @@ header {
     display: block;
 }
 
+/* anche questa la teiamo fuori ipotizzando potenziali ri-usi futuri */
+.go-down {
+    font-size: 40px;
+    margin-top: 34px;
+}
+.go-down a {
+    color: #000;
+}
    
 
 
@@ -159,11 +167,56 @@ main{
     margin-top: 80px; /* per ingombro header in fixed */
 }
 
-/* container di centratura ingombri sezioni */
+/* teniamo in linea generale le img di contenuto adattive */
+main img {
+    max-width: 100%;
+}
+
+/* container di centratura ingombri sezioni (la maggior parte sono uguali) */
 .container-center{
-    width: 90%;
-    max-width: 1160px;
+    width: 80%;
+    max-width: 1080px;
     margin: 0 auto;
+}
+
+    /* jumbotron */
+#jumbo {
+    background-color: #b4d0e7;
+    /* padding-top: 65px; se non si mette effetto sovrapposizione usare questo*/
+}
+#jumbo .container-center{
+    width: 90%;
+    max-width: 1320px;
+    /* per effetto sovrapposizione (si può decidere anche di bypassare) */
+    position: relative;
+    bottom: -80px;
+}
+
+#jumbo h1{
+    font-size: 77px;
+    line-height: 108px;
+    margin-bottom: 40px;
+}
+    /* col SX */
+#jumbo .col-sx{
+    float: left;
+    width: 30%;
+}
+#jumbo .col-sx p{
+    margin-bottom: 30px;
+}
+#jumbo .small {
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+}
+
+
+    /* col DX */
+#jumbo .col-dx {
+    float: left;
+    width: 65%;
+    margin-left: 5%;
 }
 
     
