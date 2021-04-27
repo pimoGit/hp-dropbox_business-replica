@@ -1,0 +1,222 @@
+/* general rules ------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* il font principale è a pagamento, ma usiamo l'open sans da Gfonts */
+    font-family: 'SharpGroteskWide','Open Sans',sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* comportamento base della maggior parte dei link */
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* contenitore riga clearfix */
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* centralizziamo ciò che si può */
+.btn {
+    display: inline-block;
+    padding: 8px 50px;
+    background-color: #0061ff;
+    color: #fff;
+    text-decoration: none;
+}
+.btn:hover{ /* semplifichiamo hover per tutti*/
+    text-decoration: none;
+    background-color: #3b85ff;
+}
+
+/* ipotizziamo di avere un tot di varianti simili nel sito quindi centralizziamo */
+.btn.white {
+    background-color: #fff;
+    color: #000;
+}
+.btn.white:hover{
+ background-color: #f5f5f5;
+}
+
+
+
+
+/* header  ------------- */
+header {
+    /* font-family: 'Atlas Grotesk Web', 'Open Sans', sans-serif; non utilizzato */
+    height: 80px;
+    line-height: 80px; /* centratura verticale */
+    border-bottom: solid 1px #d0d0d3;
+    background-color: #fff;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+}
+
+    /* main nav */
+#main-nav{
+    /* aggiustamenti per tenere centratura anche su bordo di effetto hover */
+    line-height: 76px;
+    padding-top: 1px;
+}
+#main-nav ul{
+    float: left;
+}
+#main-nav ul:last-child{ /* risparmiamo naming (finezza, sennò usiamo due class o id)*/
+    float: right;
+}
+
+#main-nav ul li{
+ display: inline-block;
+ margin-right: 40px;
+ position: relative; /* per submenu (bonus)*/
+
+}
+#main-nav ul:last-child li{
+    margin-right: 0;
+    margin-left: 40px;
+}
+
+#main-nav ul li a {
+    color: #000;
+    display: inline-block;
+}
+#main-nav ul li a.btn {
+    color: #fff;
+    display: inline;
+    padding: 6px 20px;
+    font-size: 14px;
+}
+
+#main-nav ul li a:hover {
+    text-decoration: none;
+}
+/* border sul li per esigenze del submenu (bordo voce principale mentre aperto submenù) */
+#main-nav ul li:hover {
+    border-bottom: solid 2px #000;
+}
+/* no border a logo e .last */
+#main-nav ul li#logo:hover, #main-nav ul li.last:hover {
+    border-bottom: none;
+}
+
+#logo img {
+    vertical-align: text-bottom;  /* centratura verticale (visivamente meglio di "middle") */
+}
+
+    /* drop down menù (bonus base) 
+    (non preciso ma per quello che sappiamo ora va bene)*/
+#main-nav ul li .sub-menu {
+    display: none;
+    float: none;
+    position: absolute;
+    top: 79px;
+    left: -20px;
+    padding: 17px 0;
+    background-color: #fafafa;
+    line-height: 100%;
+}
+#main-nav ul li .sub-menu li {
+    margin: 0;
+    display: block;
+    padding: 0;
+    white-space: nowrap; /*per tenere la dimensione sul contenuto */
+}
+#main-nav ul li .sub-menu li a {
+    padding: 10px 30px;
+    font-size: 14px;
+    display: block;
+}
+#main-nav ul li .sub-menu li:hover {
+    background-color: #ebebeb;
+    border-bottom: none;
+}
+#main-nav ul li:hover .sub-menu{
+    display: block;
+}
+
+   
+
+
+
+/* main content  ------------- */
+main{
+    margin-top: 80px; /* per ingombro header in fixed */
+}
+
+/* container di centratura ingombri sezioni */
+.container-center{
+    width: 90%;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+    
+
+
+
+
+
+/* footer  ------------- */
+footer{
+    background-color: #000;
+    padding: 100px 50px 40px 50px;
+}
+
+   /* menu replica col */
+footer .col {
+    float: left;
+    width: 20%;
+    padding-right: 5px;
+}
+footer .col h5 {
+    font-size: 20px;
+    color:#fff;
+    margin-bottom: 20px;
+}
+footer .col ul{
+    list-style-type: none;
+}
+footer .col li {
+    margin: 6px 0;
+}
+footer .col li a{
+    color: #fff;
+    font-size: 14px;
+}
+
+    /* language */
+#language {
+    display: inline-block;
+    padding-right: 35px;
+    padding-top: 45px;
+    border-top: solid 1px #fff;
+    margin-top: 100px;
+}
+
+#language a {
+    color: rgb(102, 102, 102);
+    font-size: 13px;
+}
+#language a .fas:first-child {
+    font-size: 16px;
+    color: #999;
+}
+#language a:hover {
+    text-decoration: none;
+}
