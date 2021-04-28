@@ -474,6 +474,8 @@ così da no doverne gestire da css tanti quante sono le icone */
     /* simulazione item attivo al momento */
 .col-side .item.active {
     border: solid 10px rgba(255, 255, 255, .5);
+    line-height: 14vw;
+
 }
 .col-side .item.active img {
     width: 60%;
