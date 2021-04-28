@@ -426,7 +426,7 @@ così da no doverne gestire da css tanti quante sono le icone */
 
     /* sezione customer */
 #customer {
-    padding: 50px 0;
+    padding-top: 50px;
 }
 
 #customer h2 {
@@ -519,6 +519,25 @@ così da no doverne gestire da css tanti quante sono le icone */
     padding-bottom: 10px;  /* finezza non necessaria (in caso di scroll) */
 }
 
+
+    /* sezione inizia */
+#start{
+    padding: 125px 0;
+    background-color: #b4d0e7;
+}
+#start h2 {
+    font-size: 40px;
+    color: #61082b;
+    float: left;
+    max-width: 50%;
+}
+#start .btn.white {
+    float: right;
+    text-align: center;
+    min-width: 30%;
+    max-width: 50%;
+    border: none;
+}
 
 
 
