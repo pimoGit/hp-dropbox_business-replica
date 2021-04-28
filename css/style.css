@@ -14,17 +14,16 @@ body{
     font-family: 'Open Sans',sans-serif;
     font-size: 16px;
     color: #000;
-    
 }
 
-/* comportamento base della maggior parte dei link */
+    /* comportamento base della maggior parte dei link */
 a {
     text-decoration: none;
 }
 a:hover {
     text-decoration: underline;
 }
-/* comportamento di base dei link nei testi */
+    /* comportamento di base dei link nei testi */
 p a {
     color: inherit;
     text-decoration: underline;
@@ -34,15 +33,14 @@ p a:hover {
     text-decoration: none;
 }
 
-
-/* contenitore riga clearfix */
+    /* contenitore riga clearfix */
 .row::after{
     content: "";
     display: table;
     clear: both;
 }
 
-/* centralizziamo ciò che si può */
+    /* centralizziamo ciò che si può */
 .btn {
     display: inline-block;
     padding: 8px 20px;
@@ -55,7 +53,7 @@ p a:hover {
     background-color: #3b85ff;
 }
 
-/* ipotizziamo di avere un tot di varianti simili nel sito quindi centralizziamo */
+    /* ipotizziamo di avere un tot di varianti simili nel sito quindi centralizziamo */
 .btn.white {
     border: solid 1px #000;
     background-color: #fff;
@@ -92,6 +90,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 500;
+    min-width: 1175px; /* limitiamo i danni giusto su viewport piccoli non compresi (non essendo responsive)*/
 }
 
     /* main nav */
