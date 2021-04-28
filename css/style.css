@@ -74,6 +74,41 @@ p a:hover {
     text-decoration: none;
 }
 
+    /* anche questa la teiamo fuori ipotizzando potenziali ri-usi futuri */
+.go-down {
+    font-size: 40px;
+    margin-top: 34px;
+}
+.go-down a {
+    color: #000;
+}
+
+    /* simuliamo dei checkbox per avere quello stile */
+.fake-check {
+    display: inline-block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: solid 1px #d0d0d3;
+    vertical-align: bottom;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.fake-check:first-child {
+    margin-left: 0;
+}
+.fake-check.checked {
+    border: solid 5px #0061ff;
+}
+
+    /* separatore */
+.line {
+    margin: 30px 0 40px 0;
+    height: 1px;
+    width: 50px;
+    background-color: #d0d0d3;
+}
+
 
 
 
@@ -131,11 +166,11 @@ header {
 #main-nav ul li a:hover {
     text-decoration: none;
 }
-/* border sul li (invece che su "a") per esigenze del submenu (bordo voce principale mentre aperto submenù) */
+    /* border sul li (invece che su "a") per esigenze del submenu (bordo voce principale mentre aperto submenù) */
 #main-nav ul li:hover {
     border-bottom: solid 2px #000;
 }
-/* no border a logo e .last */
+    /* no border a logo e .last */
 #main-nav ul li#logo:hover, #main-nav ul li.last:hover {
     border-bottom: none;
 }
@@ -145,7 +180,7 @@ header {
 }
 
     /* drop down menù (bonus base) 
-    (non preciso ma per quello che sappiamo ora va bene)*/
+    (su hover, non preciso ma per quello che sappiamo ora va bene)*/
 #main-nav ul li .sub-menu {
     display: none;
     float: none;
@@ -160,7 +195,7 @@ header {
     margin: 0;
     display: block;
     padding: 0;
-    white-space: nowrap; /*per tenere la dimensione minime sul contenuto */
+    white-space: nowrap; /*per tenere la dimensione minime del submenù sul contenuto */
 }
 #main-nav ul li .sub-menu li a {
     padding: 10px 30px;
@@ -175,40 +210,7 @@ header {
     display: block;
 }
 
-/* anche questa la teiamo fuori ipotizzando potenziali ri-usi futuri */
-.go-down {
-    font-size: 40px;
-    margin-top: 34px;
-}
-.go-down a {
-    color: #000;
-}
 
-/* simuliamo dei checkbox per avere quello stile */
-.fake-check {
-    display: inline-block;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    border: solid 1px #d0d0d3;
-    vertical-align: bottom;
-    cursor: pointer;
-    margin-left: 15px;
-}
-.fake-check:first-child {
-    margin-left: 0;
-}
-.fake-check.checked {
-    border: solid 5px #0061ff;
-}
-
-/* separatore */
-.line {
-    margin: 30px 0 40px 0;
-    height: 1px;
-    width: 50px;
-    background-color: #d0d0d3;
-}
    
 
 
@@ -218,12 +220,12 @@ main{
     margin-top: 80px; /* per ingombro header in fixed */
 }
 
-/* teniamo in linea generale le img di contenuto adattive */
+    /* teniamo in linea generale le img di contenuto, adattive */
 main img {
     max-width: 100%;
 }
 
-/* container di centratura ingombri sezioni (la maggior parte sono uguali) */
+    /* container di centratura ingombri sezioni (la maggior parte sono uguali) */
 .container-center{
     width: 80%;
     max-width: 1080px;
@@ -233,7 +235,7 @@ main img {
 
 
 
-    /* jumbotron */
+/* jumbotron */
 #jumbo {
     background-color: #b4d0e7;
     /* padding-top: 65px; se non si mette effetto sovrapposizione usare questo*/
@@ -286,8 +288,8 @@ main img {
 #plans .fatturazione {
     margin-bottom: 40px;
 }
-/* usando le col dovremmo spronarli a ragionare più pulito dividendo chi fa cosa 
-(e perlomeno all'inizio incasinarsi meno)  */
+    /* usando le col dovremmo spronarli a ragionare più pulito dividendo cosa fa cosa 
+    (e perlomeno all'inizio incasinarsi meno)  */
 #plans .col {
     float: left;
     /* qui blocchiamo lo spazio tra i blocchi in px ma i blocchi in sono in % */
@@ -298,7 +300,7 @@ main img {
     margin: 0;
 }
 
-/* blocco piano */
+    /* blocco piano */
 .title-plan { 
     padding: 10px 0;
     text-align: center;
@@ -340,8 +342,8 @@ main img {
     padding-left: 20px;
     margin-bottom: 25px;
 }
-/* simuliamo la tipologia diversa di marker per i "li" 
-così da no doverne gestire da css tanti quante sono le icone */
+    /* simuliamo la tipologia diversa di marker per i "li" 
+    così da no doverne gestire da css tanti quante sono le icone */
 .plan .specs li .fas, .plan .specs li .far {
     margin-left: -19px;
 }
@@ -355,7 +357,7 @@ così da no doverne gestire da css tanti quante sono le icone */
 }
 
 
-/* regole paricolari per piano eneterprise */
+    /* regole paricolari per piano eneterprise */
 .plan.enterprise{
     min-height: auto;
 }
@@ -374,7 +376,7 @@ così da no doverne gestire da css tanti quante sono le icone */
 
 
 
-    /* sezione partners */
+/* sezione partners */
 #partners {
     padding: 100px 0 50px 0;
 }
@@ -402,7 +404,7 @@ così da no doverne gestire da css tanti quante sono le icone */
 
 
 
-    /* sezione operazioni */
+/* sezione operazioni */
 #operations {
     padding: 50px 0;
 }
@@ -432,7 +434,7 @@ così da no doverne gestire da css tanti quante sono le icone */
 
 
 
-    /* sezione customer */
+/* sezione customer */
 #customer {
     padding-top: 50px;
 }
@@ -448,7 +450,7 @@ così da no doverne gestire da css tanti quante sono le icone */
 
     /* blocco full-width customer */
 
-    /* le 2 colonne laterali che avranno 4 quadrati l'una saranno identiche con ingombri in vw 
+    /* le 2 colonne laterali che avranno 4 quadrati l'una, saranno identiche con ingombri in vw 
     per contenerli*/
 .col-side {
     float: left;
@@ -471,7 +473,7 @@ così da no doverne gestire da css tanti quante sono le icone */
     filter: invert(1); /* non super xbrowser ma alternativa sarebbe mettere svg inline o crearne versione alternativa*/
 }
 
-    /* simulazione item attivo al momento */
+    /* simulazione item attivo */
 .col-side .item.active {
     border: solid 10px rgba(255, 255, 255, .5);
     line-height: 14vw;
@@ -481,7 +483,7 @@ così da no doverne gestire da css tanti quante sono le icone */
     width: 60%;
 }
 
-    /* colori bg */
+    /* colori bg items */
 .col-side .item.green{
     background-color: #a2d39b;
 }
@@ -530,7 +532,9 @@ così da no doverne gestire da css tanti quante sono le icone */
 }
 
 
-    /* sezione inizia */
+
+
+/* sezione inizia */
 #start{
     padding: 125px 0;
     background-color: #b4d0e7;
@@ -551,7 +555,9 @@ così da no doverne gestire da css tanti quante sono le icone */
 
 
 
-    /* sezione faq */
+
+
+/* sezione faq */
 #faq{
     padding: 125px 0;
 }
@@ -569,7 +575,7 @@ così da no doverne gestire da css tanti quante sono le icone */
 #faq .faq-item h5{
     font-size: 16px;
 }
-    /* rispolveriamo un caso d'usi di un absolute, qui che ha senso */
+    /* rispolveriamo un caso d'uso di absolute, qui che ha senso */
 #faq .faq-item .fas{
     position: absolute;
     top: 35px;
