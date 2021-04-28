@@ -5,11 +5,16 @@
     box-sizing: border-box;
 }
 
+html { /* finezza non necessaria*/
+    scroll-behavior: smooth;
+}
+
 body{
     /* il font principale ('SharpGroteskWide') è a pagamento, ma usiamo l'open sans da Gfonts */
     font-family: 'Open Sans',sans-serif;
     font-size: 16px;
     color: #000;
+    
 }
 
 /* comportamento base della maggior parte dei link */
@@ -49,6 +54,17 @@ a:hover {
 }
 .btn.white:hover{
  background-color: #f5f5f5;
+}
+
+.calltoact {
+    margin-top: 30px;
+}
+.calltoact a {
+    color: #0061ff;
+    text-decoration: underline;
+}
+.calltoact a:hover {
+    text-decoration: none;
 }
 
 
@@ -176,6 +192,14 @@ header {
 }
 .fake-check.checked {
     border: solid 5px #0061ff;
+}
+
+/* separatore */
+.line {
+    margin: 30px 0 40px 0;
+    height: 1px;
+    width: 50px;
+    background-color: #d0d0d3;
 }
    
 
@@ -322,22 +346,6 @@ così da no doverne gestire da css tanti quante sono le icone */
     text-align: center;
 }
 
-.plan .calltoact {
-    margin-top: 30px;
-}
-.plan .calltoact a {
-    color: #0061ff;
-    text-decoration: underline;
-}
-.plan .calltoact a:hover {
-    text-decoration: none;
-}
-.plan .line {
-    margin: 30px 0 40px 0;
-    height: 1px;
-    width: 50px;
-    background-color: #d0d0d3;
-}
 
 /* regole paricolari per piano eneterprise */
 .plan.enterprise{
@@ -415,6 +423,91 @@ così da no doverne gestire da css tanti quante sono le icone */
 }
 
 
+
+    /* sezione customer */
+#customer {
+    padding: 50px 0;
+}
+
+#customer h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+#customer .calltoact {
+    margin-bottom: 50px;
+}
+
+
+    /* blocco full-width customer */
+
+    /* le 2 colonne laterali che avranno 4 quadrati l'una saranno identiche con ingombri in vw 
+    per contenerli*/
+.col-side {
+    float: left;
+    /* li teniamo quadrati e di dimensioni relative */
+    height: 30vw;
+    width: 30vw;
+}
+.col-side .item {
+    float: left;
+    /* li teniamo quadrati e di dimensioni relative */
+    height: 15vw;
+    width: 15vw;
+    /* centratura */
+    text-align: center;
+    line-height: 15vw;
+}
+    /* colori bg */
+.col-side .item.green{
+    background-color: #a2d39b;
+}
+.col-side .item.red-dark{
+    background-color: #61082b;
+}
+.col-side .item.red{
+    background-color: #ff1c1c;
+}
+.col-side .item.red-medium{
+    background-color: #d5001f;
+}
+.col-side .item.blue{
+    background-color: #0d2481;
+}
+.col-side .item.light-blue{
+    background-color: #0093ce;
+}
+.col-side .item.lighter-blue{
+    background-color: #b4d0e7;
+}
+.col-side .item.yellow{
+    background-color: #ffd830;
+}
+
+.col-side .item img {
+    width: 60%;
+    vertical-align: middle;
+    filter: invert(1); /* non super xbrowser ma alternativa sarebbe mettere svg inline o crearne versione alternativa*/
+}
+
+    /* la col centrale si adatta sullo spazio rimanente, ma rimane su stessa H  */
+.col-center {
+    float: left;
+    background-color: #f5f5f5;
+    padding: 50px;
+    /* li teniamo quadrati e di dimensioni relative */
+    width: 40vw;
+    height: 30vw;
+    overflow-y: auto; /* finezza non necessaria */
+}
+.col-center img {
+    width: 25%;
+}
+.col-center p {
+    margin: 50px 0;
+}
+.col-center span {
+    padding-bottom: 10px;  /* finezza non necessaria (in caso di scroll) */
+}
 
 
 
