@@ -457,6 +457,20 @@ così da no doverne gestire da css tanti quante sono le icone */
     text-align: center;
     line-height: 15vw;
 }
+.col-side .item img {
+    width: 50%;
+    vertical-align: middle;
+    filter: invert(1); /* non super xbrowser ma alternativa sarebbe mettere svg inline o crearne versione alternativa*/
+}
+
+    /* simulazione item attivo al momento */
+.col-side .item.active {
+    border: solid 10px rgba(255, 255, 255, .5);
+}
+.col-side .item.active img {
+    width: 60%;
+}
+
     /* colori bg */
 .col-side .item.green{
     background-color: #a2d39b;
@@ -483,11 +497,7 @@ così da no doverne gestire da css tanti quante sono le icone */
     background-color: #ffd830;
 }
 
-.col-side .item img {
-    width: 60%;
-    vertical-align: middle;
-    filter: invert(1); /* non super xbrowser ma alternativa sarebbe mettere svg inline o crearne versione alternativa*/
-}
+
 
     /* la col centrale si adatta sullo spazio rimanente, ma rimane su stessa H  */
 .col-center {
