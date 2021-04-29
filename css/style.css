@@ -517,9 +517,10 @@ main img {
     background-color: #f5f5f5;
     padding: 50px;
     /* li teniamo quadrati e di dimensioni relative */
-    width: 40vw;
+    /* width: 40vw; su windows in genere da problemi */
+    width: calc(100% - 60vw); /* con questa soluzione funziona anche su windows*/
     height: 30vw;
-    overflow-y: auto; /* finezza non necessaria */
+    overflow-y: auto;  /* finezza non necessaria */
 }
 .col-center img {
     width: 25%;
