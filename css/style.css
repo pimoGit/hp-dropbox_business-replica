@@ -292,7 +292,7 @@ main img {
     (e perlomeno all'inizio incasinarsi meno)  */
 #plans .col {
     float: left;
-    /* qui blocchiamo lo spazio tra i blocchi in px ma i blocchi in sono in % */
+    /* qui blocchiamo lo spazio tra i blocchi in px ma i blocchi in sono in % (grazie al calc) */
     width: calc((100% / 3) - 40px);
     margin: 0 60px;
 }
@@ -312,7 +312,7 @@ main img {
     font-size: 14px;
     border: solid 1px #d0d0d3;
     margin-bottom: 50px;
-    min-height: 1023px; /* per ora non abbiamo molto per regolarizzare in altezza*/
+    min-height: 1023px; /* per ora non abbiamo molto altro per regolarizzare in altezza*/
 }
 
 .plan h3 {
@@ -339,11 +339,11 @@ main img {
 }
 .plan .specs li {
     list-style-type: none;
-    padding-left: 20px;
+    padding-left: 20px; /* per spazio nostri marker di "li" in pagina*/
     margin-bottom: 25px;
 }
     /* simuliamo la tipologia diversa di marker per i "li" 
-    così da no doverne gestire da css tanti quante sono le icone */
+    così da non doverne gestire da css tanti quante sono le icone */
 .plan .specs li .fas, .plan .specs li .far {
     margin-left: -19px;
 }
@@ -424,7 +424,7 @@ main img {
 #operations .col {
     float: left;
     /* identico a #plans .col
-    (non ripetiamo molto e potrebbe essere meno mantenibile centralizzare in questo caso)  % */
+    (non ripetiamo molto e potrebbe essere meno mantenibile/comprensibile centralizzare in questo caso)  % */
     width: calc((100% / 3) - 40px);
     margin: 0 60px;
 }
@@ -454,33 +454,33 @@ main img {
     per contenerli*/
 .col-side {
     float: left;
-    /* li teniamo quadrati e di dimensioni relative */
+    /* li teniamo quadrati e di dimensioni relative (somma degli item interni) */
     height: 30vw;
     width: 30vw;
 }
 .col-side .item {
     float: left;
-    /* li teniamo quadrati e di dimensioni relative */
+    /* li teniamo quadrati e di dimensioni relative, sempre in vw */
     height: 15vw;
     width: 15vw;
     /* centratura */
     text-align: center;
-    line-height: 15vw;
+    line-height: 15vw; /* parte della centratura verticale */
 }
 .col-side .item img {
     width: 50%;
-    vertical-align: middle;
-    filter: invert(1); /* non super xbrowser ma alternativa sarebbe mettere svg inline o crearne versione alternativa*/
+    vertical-align: middle; /* parte della centratura verticale */
+    filter: invert(1); /* non super xbrowser ma alternativa sarebbe mettere svg inline o crearne versione alternativa per potergli dare colore opposto*/
 }
 
     /* simulazione item attivo */
 .col-side .item.active {
     border: solid 10px rgba(255, 255, 255, .5);
-    line-height: 14vw;
+    line-height: 14vw; /* aggiustiamo parte della centratura verticale */
 
 }
 .col-side .item.active img {
-    width: 60%;
+    width: 60%; /* aggiustiamo dimensione */
 }
 
     /* colori bg items */
@@ -518,7 +518,7 @@ main img {
     padding: 50px;
     /* li teniamo quadrati e di dimensioni relative */
     /* width: 40vw; su windows in genere da problemi */
-    width: calc(100% - 60vw); /* con questa soluzione funziona anche su windows*/
+    width: calc(100% - 60vw); /* con questa soluzione funziona anche su windows */
     height: 30vw;
     overflow-y: auto;  /* finezza non necessaria */
 }
@@ -549,9 +549,11 @@ main img {
 #start .btn.white {
     float: right;
     text-align: center;
+    border: none;
+    /* per avere un controllo di dimensioni più dettagliate, ma sempre relative */
     min-width: 30%;
     max-width: 50%;
-    border: none;
+
 }
 
 
